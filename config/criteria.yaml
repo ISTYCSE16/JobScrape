@@ -1,0 +1,28 @@
+searches:
+  - term: "Software Developer"
+    location: "Edmonton, AB"
+    distance: 50
+    job_type: "fulltime"
+  - term: "Software Developer"
+    location: "Calgary, AB"
+    distance: 50
+    job_type: "fulltime"
+  - term: "AI Engineer"
+    location: "Edmonton, AB"
+    distance: 50
+    job_type: "fulltime"
+  - term: "AI Engineer"
+    location: "Calgary, AB"
+    distance: 50
+    job_type: "fulltime"
+
+
+sites:
+  - linkedin
+  - indeed
+  - google
+  - zip_recruiter
+
+hours_old: 24
+results_wanted: 25
+country_indeed: "canada"
