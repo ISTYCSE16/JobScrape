@@ -2,5 +2,11 @@ __pycache__/
 *.pyc
 .env
 applications/
+data/
 .DS_Store
 ._*
+
+# personal data — copy the *.example.md templates to create these locally
+config/base_cv.md
+config/skills.md
+*.docx

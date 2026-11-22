@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JobScrape</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div id="sidebar-options">
+                <div class="sidebar-header">
+                    <h1>JobScrape</h1>
+                </div>
+                <nav class="nav-options">
+                    <button class="nav-item" data-category="recent">
+                        <span class="nav-label">Jobs Found</span>
+                        <span class="nav-count" id="count-recent">0</span>
+                        <span class="nav-sub">From last search</span>
+                    </button>
+                    <button class="nav-item" data-category="all">
+                        <span class="nav-label">All Jobs</span>
+                        <span class="nav-count" id="count-all">0</span>
+                        <span class="nav-sub">Last 14 days</span>
+                    </button>
+                    <button class="nav-item" data-category="saved">
+                        <span class="nav-label">Saved Jobs</span>
+                        <span class="nav-count" id="count-saved">0</span>
+                        <span class="nav-sub">Your selections</span>
+                    </button>
+                    <button class="nav-item" data-category="preferred">
+                        <span class="nav-label">Preferred Companies</span>
+                        <span class="nav-count" id="count-preferred">0</span>
+                        <span class="nav-sub">Target companies</span>
+                    </button>
+                </nav>
+            </div>
+            <div id="sidebar-list" hidden>
+                <div class="list-header">
+                    <button class="back-btn" id="go-back">&#8592; Go Back</button>
+                    <h2 id="list-title"></h2>
+                </div>
+                <div class="job-list" id="job-list"></div>
+            </div>
+        </aside>
+
+        <main class="detail-pane">
+            <div class="pane-toolbar">
+                <button class="btn btn-stop" id="stop-btn" hidden>Stop</button>
+                <button class="btn btn-scrape" id="scrape-btn">Scrape Jobs</button>
+                <button class="btn" id="add-job-btn">Add Job</button>
+            </div>
+            <div id="scrape-progress" hidden>
+                <div class="progress-header">
+                    <h2 id="progress-title">Scraping Jobs...</h2>
+                    <span class="progress-summary" id="progress-summary"></span>
+                </div>
+                <div class="progress-log" id="progress-log"></div>
+            </div>
+            <div class="empty-state" id="empty-state">
+                <h1>Select A Job To See Details</h1>
+            </div>
+            <div id="job-detail" hidden>
+                <div class="tab-bar">
+                    <button class="tab active" data-tab="description">Job Description</button>
+                    <button class="tab" data-tab="ats" id="tab-ats" hidden>ATS Breakdown</button>
+                    <button class="tab" data-tab="resume" id="tab-resume" hidden>Resume Suggestion</button>
+                    <button class="tab" data-tab="missing" id="tab-missing" hidden>Missing Bits</button>
+                </div>
+                <div class="tab-content" id="tab-content"></div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

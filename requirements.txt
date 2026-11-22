@@ -3,3 +3,5 @@ anthropic
 pandas
 openpyxl
 pyyaml
+flask
+python-dotenv

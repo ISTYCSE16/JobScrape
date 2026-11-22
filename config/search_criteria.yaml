@@ -1,0 +1,47 @@
+# Master Job Search Criteria
+# This file is the single source of truth for all search parameters.
+# The scraper reads it to build search combinations; the web UI reads
+# preferred_companies for the sidebar filter.
+
+searches:
+  titles:
+    - "AI Engineer"
+    - "AI Engineer Intern"
+    - "Software Developer"
+    - "Software Developer Intern"
+    - "Software Engineer"
+    - "Software Engineer Intern"
+  locations:
+    - "Edmonton, AB"
+    - "Calgary, AB"
+    - "Vancouver, BC"
+    - "Toronto, ON"
+  distance: 50
+
+sites:
+  - linkedin
+  - indeed
+  - zip_recruiter
+
+results_wanted: 25
+hours_old: 72
+country_indeed: "canada"
+
+experience:
+  max_years: 4
+
+preferred_companies:
+  - "Government of Alberta"
+  - "AIMCo"
+  - "AltaML"
+  - "Alberta Machine Intelligence Institute"
+  - "ATCO"
+  - "EPCOR"
+  - "Enverus"
+  - "Alberta Innovates"
+
+location_priority:
+  "Edmonton, AB": 1
+  "Calgary, AB": 2
+  "Vancouver, BC": 3
+  "Toronto, ON": 4
